@@ -18,9 +18,9 @@ int main() {
     conta_impares(a, n, impares, qtd_impares);
     std::cout << qtd_impares << std::endl;
     if (qtd_impares > 0) {
-        std::cout << a[0];
+        std::cout << impares[0];
         for (int i = 1; i < qtd_impares; ++i) {
-            std::cout << " " << a[i];
+            std::cout << " " << impares[i];
         }
     }
     return 0;
