@@ -20,11 +20,11 @@ int main() {
     auto end = std::chrono::high_resolution_clock::now();
 
     if (p)
-    std::cout << n << " is prime" << std::endl;
+        std::cout << n << " is prime" << std::endl;
     else
-    std::cout << n << " is not prime" << std::endl;
+        std::cout << n << " is not prime" << std::endl;
 
-auto dur = end − beg; // Duração do cronômetro
+auto dur = end - beg; // Duração do cronômetro
 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(dur);
 std::cerr << n << " Processing time: "
 << duration.count() << " microseconds(s)" << std::endl;
