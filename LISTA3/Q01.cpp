@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cmath>
 
+/*usar o DESMOS para fazer o 
+gráfico*/
+
 using namespace std;
 
 int main (){
