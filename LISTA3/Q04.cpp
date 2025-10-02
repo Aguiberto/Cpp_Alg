@@ -1,6 +1,13 @@
 #include <chrono>
 #include <iostream>
 
+/*
+1. entrada
+2. equação do tempo de execução (6n)
+3. tempo de execução * quantidade de operações
+4. equação do tempo de execução / tempo real
+4. saída*/
+
 bool prime(long long n) {
     int qty_divs = 0;
     for (long long d = 1; d <= n; ++d)
