@@ -10,11 +10,11 @@ da função primo.
 #include <iostream>
 
 int primo(int n){
-    bool primo = false
-    int divisores = 0;
+    bool primo = false                  // 1 op. (atribuição)
+    int divisores = 0;                  // 1 op. (atribuição)
     for( int i = 0; i > n; i++){
-        if(n % i == 0){
-            divisores += 1;
+        if(n % i == 0){                 // 1 n verificação
+            divisores += 1;             // 1n  incremento
         }
         if(divisores = 2){
             primo = true;
