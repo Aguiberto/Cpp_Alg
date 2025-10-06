@@ -3,7 +3,7 @@
 
 /*
 1. entrada
-2. equação do tempo de execução (6n)
+2. equação do tempo de execução (6n+3)
 3. tempo de execução * quantidade de operações
 4. equação do tempo de execução / tempo real
 4. saída*/
