@@ -8,33 +8,60 @@ da função primo.
 
 
 #include <iostream>
+#include <chrono>
 
-int primo(int n){
-    bool primo = false                  // 1 op. (atribuição)
-    int divisores = 0;                  // 1 op. (atribuição)
-    for( int i = 0; i > n; i++){
-        if(n % i == 0){                 // 1 n verificação
-            divisores += 1;             // 1n  incremento
-        }
-        if(divisores = 2){
-            primo = true;
+bool primo(int n){
+    bool primo = false;                  
+    int divisores = 0;                  
+    for( int i = 1; i <= n; i++){
+        if(n % i == 0){                
+            divisores += 1;             
         }
     }
+    if(divisores == 2){
+        primo = true;
+    }
+
     return primo;
 }
 
-using namespace std;
+// using namespace std;
+
+// int main(){
+
+//     int numero;
+
+//     cout << " Digite um numero para averiguar se ele e primo: " << endl;
+//     cin >> numero;
+
+//     bool testando_primo = primo(numero);
+
+//     if (testando_primo == true){
+//     cout << "E primo " << endl;
+//     }else {
+//         cout << "Nao e primo" << endl; 
+//     }
+//     return 0;
+// }
 
 int main(){
+    long long n;
+    std::cin>>n;
 
-    int numero;
+    // Inicio do cronômetro
+    auto beg = std::chrono::high_resolution_clock::now();
+    bool p = primo(n);
+    // Fim do cronômetro
+    auto end = std::chrono::high_resolution_clock::now();
 
-    cout << " Digite um número para averiguar se ele é primo: " << endl;
-    cin >> numero;
+    if (p)
+        std::cout << n << " is prime" << std::endl;
+    else 
+    std::cout << n << " is not prime" << std::endl;
 
-    testando_primo = primo(numero);
-
-    cout << "É primo? " << testando_primo << endl;
+    auto dur = end - beg;
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(dur);
+    std::cerr << n << " Processing time: " << duration.count() << " microsecond(s)" << std::endl;
 
     return 0;
-}
+}      
