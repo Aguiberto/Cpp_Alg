@@ -8,17 +8,17 @@ bool primo4(int n){
     bool primo = true;
     int divisor = 3;
 
-    if(n = 1){
-        primo = false
+    if(n == 1){
+        primo = false;
     }
-    if(n = 2){
+    if(n == 2){
         primo = true;
     }
-    if(n % 2==0){
+    if(n != 2 && n % 2==0){
         primo = false;
     }
     while(primo && divisor <= (n / 2 )){
-        if(n % d == 0){
+        if(n % divisor == 0){
             primo = false;
         }
         divisor += 2;
@@ -36,7 +36,7 @@ int main(){
 
     verificador = primo4(numero);
 
-    if(verificador = true){
+    if(verificador == true){
         cout << "E primo" << endl;
     }else{
         cout << "Nao e primo" << endl;
