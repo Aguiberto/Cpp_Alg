@@ -4,7 +4,6 @@ using namespace std;
 
 int sublista(int n, int lista[]){
     
-    lista[n];
     int fracao = 1;
     int maior_fracao = 0;
 
