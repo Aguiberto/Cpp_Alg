@@ -36,12 +36,15 @@ int main(){
 
     bool possibilidade = false;
 
+    // empilhadas uma deitada e outra em pé
     if((foto1[0] + foto2[1] <= pagina[1]) && (altura_maior <= pagina[0])){
         possibilidade = true;       
     }
+    // as duas empilhadas em pé 
     if((foto1[1] + foto2[1] <= pagina[1]) && ( largura_maior <= pagina[0])){
         possibilidade = true;
     }
+    // as duas empilhadas deitadas  
     if((foto1[0] + foto2[0] <= pagina[1]) && (altura_maior <= pagina[0])){
         possibilidade = true;
     }
