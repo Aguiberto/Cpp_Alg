@@ -1,3 +1,4 @@
+<<<<<<< HEAD:IF/LISTA6_FB01/Q04.cpp
 /*Calculando a distância entre 2 pontos
 em coordenadas geográficas*/
 
@@ -35,3 +36,15 @@ int main(){
 
 /* função para calcular a matriz a partir de 2 pontos */
 
+=======
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+    
+
+    return 0;
+}
+>>>>>>> 46b1f96eb18dc2c45ab95ed01b2dd51ab648c607:LISTA6_FB01/Q04.cpp
