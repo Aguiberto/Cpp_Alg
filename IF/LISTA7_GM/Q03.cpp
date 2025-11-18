@@ -18,16 +18,36 @@ void remove_indice(int array[],int &tamanho, int indice){
     tamanho--;
 }
 
-void remove_value();
+void remove_value(int array[],int &tamanho, int valor){
+    int procurado;
+    for(int i = 0; i<tamanho;i++){
+        if(array[i] == valor){
+            procurado = i;
+            break;
+        }
+    }
+    if(procurado >= 0){
+    remove_indice(array,tamanho,procurado);
+    }
+}
 
 int main(){
     
-    int array[5] = {10,20,30,40,50};
-    int tamanho = 5;
-    remove_indice(array,tamanho,2);
+    int arrayA[5] = {10,20,30,40,50};
+    int tamanhoA = 5;
+    remove_indice(arrayA,tamanhoA,2);
 
-    for(int i = 0; i < tamanho; i++){
-        cout << array[i] << endl;
+    for(int i = 0; i < tamanhoA; i++){
+        cout << arrayA[i] << endl;
+    }
+
+    int arrayB[5] = {1,2,3,4,5};
+    int tamanhoB = 5;
+
+    remove_value(arrayB,tamanhoB,3);
+
+    for(int i = 0; i < tamanhoB; i++){
+        cout << arrayB[i] << endl;
     }
 
     return 0;

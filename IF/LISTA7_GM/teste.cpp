@@ -13,7 +13,7 @@ int main(){
 
     int indice = 0;
 
-    for(int i = 0; i > tamanho; i++){
+    for(int i = 0; i < tamanho; i++){
         if(array[i] == valor){
             indice = i;
             break;
