@@ -27,6 +27,7 @@ int main(){
 
     int array [tamanho];
     for(int i = 0; i < tamanho; i++){
+       cout << "Informe um valor para o array:" << endl;
        cin >> array[i];
     }
 
