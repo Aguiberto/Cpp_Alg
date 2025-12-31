@@ -10,7 +10,7 @@ using namespace std;
 
 void remove_esp(int array[], int &tamanho, int &capacidade, int index){
 
-    for(int i = indice; i < tamanho; i++){
+    for(int i = index; i < tamanho; i++){
         array[i] = array[i+1];
     }
     tamanho--;
