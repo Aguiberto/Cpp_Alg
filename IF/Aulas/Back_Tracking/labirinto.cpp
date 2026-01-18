@@ -2,7 +2,7 @@
 
 bool labirinto_bt(int labirinto[20][20], int linha, int coluna, int l, int c){
 
-    if(l<0 or c<0 or l >= linha or c >= coluna or labirinto[l][c] == 1){
+    if(l<0 or c<0 or l >= linha or c >= coluna or labirinto[l][c] == 1 or  labirinto[l][c] == 9){
         return false;
     }
     /** Rejeitar se:
