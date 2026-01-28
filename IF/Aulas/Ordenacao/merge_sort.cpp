@@ -11,6 +11,7 @@ void merge(int array[],int inicio1, int final1, int inicio2, int final2){
     j = inicio2;
     k = 0;
 
+    /*Aqui acontece a ordenação  de fato*/
     while(i <= final1 && j <= final2){
     /*While roda até que tenha sido feita a leitura
     de todos os valores de alguma das metades do array*/
@@ -21,8 +22,8 @@ void merge(int array[],int inicio1, int final1, int inicio2, int final2){
             temp[k++] = array[i++];
             /*Se o valor na primeira metade for menor então:
              1. o array temporário vai receber esse valor
-             2. Índice K (indice do array temporário aumenta)
-             3. índice I aumenta e o valor de comparação do primeiro array será o proximo*/
+             2. Índice K (indice_i do array temporário aumenta)
+             3. índice I aumenta e o valor de comparação do indice_i array será o proximo*/
         }else{
             /*Caso o menor valor seja da segunda metade do array:
             1. Aumenta Adiciona o valor na segunda metade do do array no array temporário
@@ -31,18 +32,22 @@ void merge(int array[],int inicio1, int final1, int inicio2, int final2){
             temp[k++] = array[j++];
         }
     }
-    
-    
     /* Loops "CleanUP" que adicionam os valores que sobraram
     no final do array temporário*/
+
+    /*Esse trecho é executado quando sobram 
+    valores da PRIMEIRA metade*/
     while(i <= final1){
         temp[k++] = array[i++];
     }
 
+    /*Esse trecho é executado quando sobram 
+    valores da SEGUNDA metade*/
     while (j <= final2){
         temp[k++] = array[j++];
     }
     
+    /*Devolve os valores do array temporário para o array original.*/
     for(int p = 0; p < tamanho ; p++){
         array[inicio1 + p] = temp[p];
     }
@@ -51,17 +56,19 @@ void merge(int array[],int inicio1, int final1, int inicio2, int final2){
 
 }
 
-void sort_merg(int array[], int primeiro, int ultimo){
+void sort_merg(int array[], int indice_i, int indice_f){
+/*Os parâmetro são: 1. O array ser ordenado | 2. 1º e Ultimos índice do array*/
 
     int meio;
 
-    if(primeiro < ultimo){
+    if(indice_i < indice_f){
 
-        meio = (primeiro + ultimo) / 2;
-        sort_merg(array, primeiro, meio);
-        sort_merg(array, meio+1,ultimo);
-        merge(array, primeiro,meio,meio+1,ultimo);
+        meio = (indice_i + indice_f) / 2;
+        sort_merg(array, indice_i, meio);
+        sort_merg(array, meio+1, indice_f);
+        merge(array, indice_i,meio,meio+1,indice_f);
     }
+
 
 }
 
