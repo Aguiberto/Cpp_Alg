@@ -1,28 +1,29 @@
 #include "ordenacao.hpp"
 
 /* TODO: Implementar função */
+// Big-OH: O(n)
 bool ordenado(int a[],  unsigned int t){
      
-    for(int i = 0; i < t -1; i++){
+    for(unsigned int i = 0; i < t -1; i++){
 
         if(a[i] > a[i+1]){
             return false;
-        }else{
-            return true;
         }
     }
-    
+
+    return true;
 }
 
 /* TODO: Implementar função */
+//Big-OH: O(n²)
 void selecao(int a[], unsigned int t){
     int menor, aux;
 
-  for(int i = 0; i < t-1; i++){
+  for(unsigned int i = 0; i < t-1; i++){
 
     menor = i;
 
-    for(int j = i+1; j < t;j++){
+    for(unsigned int j = i+1; j < t;j++){
 
       if(a[j] < a[menor]){
         menor = j;
@@ -39,9 +40,10 @@ void selecao(int a[], unsigned int t){
 }
 
 /* TODO: Implementar função */
+//Big-OH: O(n²)
 void insercao(int a[], unsigned int t){
 
-    for(int i = 0; i < t; i++){
+    for(unsigned int i = 0; i < t; i++){
 
         int escolhido = a[i];
         int j = i - 1;
@@ -112,10 +114,11 @@ void merge_sort_recursivo(int a[], int indice_i, int indice_f){
 };
 
 // Função Wrapper (Embrulho)
+//Big-OH: O(nlogn)
 void merge_sort(int a[], unsigned int t){
 
     if(t <= 1){
-    // Se o array é vazio então algoritmo não faz nada
+    // Se o array é vazio ou então tem apenas um elemento, então algoritmo não faz nada
         return;
     }
 
