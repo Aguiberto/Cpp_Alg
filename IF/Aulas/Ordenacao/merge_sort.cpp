@@ -62,6 +62,7 @@ void sort_merg(int array[], int indice_i, int indice_f){
     int meio;
 
     if(indice_i < indice_f){
+    // se tiver ordenado o algoritmo pode prosseguir
 
         meio = (indice_i + indice_f) / 2;
         sort_merg(array, indice_i, meio);

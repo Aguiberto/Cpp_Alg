@@ -1,6 +1,8 @@
 #include<iostream>
 #include<algorithm>
 
+/*Mostra quantas casas tem o caminho com menor quantidade de casas*/
+
 using namespace std;
 const int MUITO_ALTO = 1e6;
 
